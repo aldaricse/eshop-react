@@ -1,0 +1,50 @@
+body{
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  @include scrollMinimal(darken(map-get($my-colors, color1), 15%), 12px);
+}
+
+.main{
+	position: relative;
+  // max-width: 1920px;
+  // max-width: 1440px;
+	width: 100%;
+	margin-left: auto;
+  margin-right: auto;
+  min-height: 240px;
+  // min-height: 720px;
+  // min-height: calc(100% - #{$gutter-header} - #{$gutter-footer});
+  // margin-top: calc(#{$gutter-header} - 1px);
+  min-height: calc(100vh - #{$gutter-header}); // -2rem -> breadcrumb
+  // min-height: 2500px;
+  // overflow: hidden;
+
+  // @include mq-to(lg){
+    // top: $gutter-header;
+    // margin-bottom: $gutter-header;
+    margin-top: $gutter-header;
+  // }
+}
+
+a{
+  // color: map-get($my-colors, dark-color);
+  color: #000;
+}
+
+  
+form {
+  width: 100%;
+  // max-width: 600px;
+}
+
+label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+}

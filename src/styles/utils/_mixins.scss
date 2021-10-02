@@ -1,0 +1,190 @@
+
+// LAYOUT
+
+$xs: map-get($grid-breakpoints, xs);
+$ss: map-get($grid-breakpoints, ss);
+$sm: map-get($grid-breakpoints, sm);
+$md: map-get($grid-breakpoints, md);
+$lg: map-get($grid-breakpoints, lg);
+$xlg: map-get($grid-breakpoints, xlg);
+$xl: map-get($grid-breakpoints, xl);
+$xxl: map-get($grid-breakpoints, xxl);
+$xxxl: map-get($grid-breakpoints, xxxl);
+
+// DESDE
+@mixin mq-from($size){
+  @if $size == xs {
+    @media screen and (min-width: $xs){ @content; }
+  } @else if $size == ss {
+    @media screen and (min-width: $ss){ @content; }
+  } @else if $size == sm {
+    @media screen and (min-width: $sm){ @content; }
+  } @else if $size == md {
+    @media screen and (min-width: $md){ @content; }
+  } @else if $size == lg {
+    @media screen and (min-width: $lg){ @content; }
+  } @else if $size == xlg {
+    @media screen and (min-width: $xlg){ @content; }
+  } @else if $size == xl {
+    @media screen and (min-width: $xl){ @content; }
+  } @else if $size == lg {
+    @media screen and (min-width: $lg){ @content; }
+  } @else if $size == xxl {
+    @media screen and (min-width: $xxl){ @content; }
+  } @else if $size == xxxl {
+    @media screen and (min-width: $xxxl){ @content; }
+  } @else {
+    @media screen and (min-width: $min-width){ @content; }
+  }
+}
+
+// @mixin from($min-width){
+//   @media screen and (min-width: $min-width){ @content; }
+// }
+
+// @mixin from-xs(){
+//   @media screen and (min-width: $xs){ @content; }
+// }
+// @mixin from-ss(){
+//   @media screen and (min-width: $ss){ @content; }
+// }
+
+// @mixin from-sm(){
+//   @media screen and (min-width: $sm){ @content; }
+// }
+
+// @mixin from-md(){
+//   @media screen and (min-width: $md){ @content; }
+// }
+
+// @mixin from-lg(){
+//   @media screen and (min-width: $lg){ @content; }
+// }
+
+// @mixin from-xlg(){
+//   @media screen and (min-width: $xlg){ @content; }
+// }
+
+// @mixin from-xl(){
+//   @media screen and (min-width: $xl){ @content; }
+// }
+
+// @mixin from-xxl(){
+//   @media screen and (min-width: $xxl){ @content; }
+// }
+
+// @mixin from-xxxl(){
+//   @media screen and (min-width: $xxxl){ @content; }
+// }
+
+// HASTA
+@mixin mq-to($size){
+  @if $size == xs {
+    @media screen and (max-width: $xs){ @content; }
+  } @else if $size == ss {
+    @media screen and (max-width: $ss){ @content; }
+  } @else if $size == sm {
+    @media screen and (max-width: $sm){ @content; }
+  } @else if $size == md {
+    @media screen and (max-width: $md){ @content; }
+  } @else if $size == lg {
+    @media screen and (max-width: $lg){ @content; }
+  } @else if $size == xlg {
+    @media screen and (max-width: $xlg){ @content; }
+  } @else if $size == xl {
+    @media screen and (max-width: $xl){ @content; }
+  } @else if $size == lg {
+    @media screen and (max-width: $lg){ @content; }
+  } @else if $size == xxl {
+    @media screen and (max-width: $xxl){ @content; }
+  } @else if $size == xxxl {
+    @media screen and (max-width: $xxxl){ @content; }
+  } @else {
+    @media screen and (max-width: $max-width){ @content; }
+  }
+}
+
+
+// @mixin to($max-width){
+//   @media screen and (max-width: $max-width){ @content; }
+// }
+
+// @mixin to-sm(){
+//   @media screen and (max-width: $sm){ @content; }
+// }
+// @mixin to-ss(){
+//   @media screen and (max-width: $ss){ @content; }
+// }
+
+// @mixin to-md(){
+//   @media screen and (max-width: $md){ @content; }
+// }
+
+// @mixin to-lg(){
+//   @media screen and (max-width: $lg){ @content; }
+// }
+
+// @mixin to-xlg(){
+//   @media screen and (max-width: $xlg){ @content; }
+// }
+
+// @mixin to-xl(){
+//   @media screen and (max-width: $xl){ @content; }
+// }
+
+// @mixin to-xxl(){
+//   @media screen and (max-width: $xxl){ @content; }
+// }
+
+// @mixin to-xxxl(){
+//   @media screen and (max-width: $xxxl){ @content; }
+// }
+
+
+// SCROLL
+@mixin scrollMinimal($border-color: map-get($my-colors, dark-color), $border-width: 7.5px){
+  // Chrome
+    &::-webkit-scrollbar {
+      width: $border-width;
+      height: $border-width;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(#000,0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $border-color;
+      outline: $border-width solid $border-color;
+    }
+
+  // Mozila
+    &::-moz-scrollbar {
+      width: $border-width;
+      height: $border-width;
+    }
+
+    &::-moz-scrollbar-track {
+      -moz-box-shadow: inset 0 0 6px rgba(#000,0.3);
+    }
+
+    &::-moz-scrollbar-thumb {
+      background-color: $border-color;
+      outline: $border-width solid $border-color;
+    }
+
+  // IE
+    &::-ms-scrollbar {
+      width: $border-width;
+      height: $border-width;
+    }
+
+    &::-ms-scrollbar-track {
+      -ms-box-shadow: inset 0 0 6px rgba(#000,0.3);
+    }
+
+    &::-ms-scrollbar-thumb {
+      background-color: $border-color;
+      outline: $border-width solid $border-color;
+    }
+}

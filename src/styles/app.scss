@@ -1,0 +1,45 @@
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+
+// Config
+@import "config/variables";
+@import "config/fonts";
+
+// Vendors
+@import "vendors/bootstrap";
+@import "vendors/animatecss";
+
+// Utils
+@import 'utils/mixins';
+@import 'utils/keyframes';
+@import 'utils/commons';
+@import 'utils/customs';
+
+// Base
+@import 'base/reset';
+@import 'base/typo';
+
+// Components
+@import 'components/loader-page';
+@import 'components/loading';
+@import 'components/bootstrap-components';
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/cards';
+@import 'components/swiper';
+
+// Layout
+@import 'layout/body';
+@import 'layout/navbar';
+@import 'layout/footer';
+@import 'layout/sections';
+
+// Pages
+@import 'pages/index';
+@import 'pages/about';
+@import 'pages/products';
+@import 'pages/product-detail';
+@import 'pages/quote';
+@import 'pages/success';
+

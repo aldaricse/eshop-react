@@ -1,0 +1,122 @@
+// sections
+.section{
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.section-height-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - #{$gutter-header} - 3rem);
+}
+
+.max-container{
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+
+// loader page
+.loader-page--dark{
+  .loader-name{
+    color: map-get($my-colors, color1);
+  }
+
+  .loader-circle{
+    border-top: 5px solid map-get($my-colors, color1);
+  }
+}
+
+// error 404
+.error404{
+  min-height: calc(100vh - #{$gutter-header} - #{$gutter-breadcrumb});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+// sections
+.section-search-banner{
+  padding: 1.75rem 0;
+
+  @include mq-from(lg){
+    padding: 2rem 0;
+  }
+}
+
+// breadcrumb
+.breadcrumb {
+  font-size: 14px;
+}
+
+// icons
+.icon{
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &-telefono{
+    background-image: url('/assets/images/icon-llamenos.png');
+  }
+
+  &-escribenos{
+    background-image: url('/assets/images/icon-escribenos.png');
+  }
+}
+
+// link wsp
+.link-wsp{
+  position: fixed;
+  display: flex;
+  background-color: #4dc247;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(#000,.4);
+  bottom: 35px;
+  right: 35px;
+  z-index: 10;
+
+  .icon-wsp{
+    font-size: 2.25rem;
+    width: 100%;
+    color: #fff;
+  }
+}
+
+.pulse-wsp {
+  animation: borderPulse 1s 3 ease-in-out;
+}
+
+
+// products cards
+
+.card-category-products,
+.card-product-offers{
+  min-height: 310px;
+
+  @include mq-to(sm){
+    padding: 1rem .5rem;
+    min-height: 290px;
+    
+    .card__image{
+      img{
+        max-height: 120px;
+      }
+    }
+  
+    .card__data{
+      padding-top: .5rem;
+
+      span{
+        font-size: .75rem;
+      }
+    }
+  }
+}

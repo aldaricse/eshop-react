@@ -1,0 +1,56 @@
+// .ilg_parallax_container{
+//   width: 100%;
+//   padding-top: 90px;
+//   padding-bottom: 90px;
+//   @extend .bg-parallax;
+//   background-image: url(/assets/images/seccion-nosotros.jpg);
+
+//   &:before{
+//     content: "";
+//     background: rgba(36, 36, 36, 0.6);
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     z-index: 0;
+//   }
+// }
+
+.about{
+  .subtitle-solutions{
+    h3{
+      font-size: 2rem;
+    }
+
+    @include mq-from(md){
+      border-right: 2px solid #fff;
+    }
+  }
+
+  // &-banner{
+  //   background-image: url(/assets/images/seccion-nosotros.jpg);
+  // }
+
+  &-solutions{
+    padding-bottom: 10rem;
+
+    &--image{
+      background-color: #fff;
+
+      .ctn-image{
+        position: relative;
+        // padding-bottom: 56.25%;
+        padding-bottom: 48.25%;
+      }
+
+      img{
+        position: absolute;
+        top: -25%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+// BUTTONS
+
+.btn{
+	padding: .465rem 1.35rem;
+  position: relative;
+  display: inline-block;
+  width: initial;
+  // border: 0;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1rem;
+  outline: 0;
+  transition: background-color .3s;
+  background-color: #777;
+  border: 1px solid #777;
+
+  &.w-100{
+  	width: 100%;
+  }
+
+  &--normal{
+    background-color: map-get($my-colors, color1);
+    color: map-get($my-colors, dark);
+
+    &:hover{
+      background-color: darken(map-get($my-colors, color1), 10%);
+    }
+  }
+
+  &--transparent{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: .55em 1.2em;
+
+    &:hover{
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  &--link{
+    border: 0;
+    &, &:hover{
+      background-color: transparent;
+    }
+  }
+
+  &--dark{
+    background-color: map-get($my-colors, dark-color);
+    color: #fff;
+    border-color: map-get($my-colors, dark-color);
+
+    &:hover{
+      background-color: #fff;
+      color: map-get($my-colors, dark-color);
+    }
+  }
+
+  &--dark-theme{
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+
+    &:hover{
+      background-color: map-get($my-colors, color1);
+      color: #000;
+      border-color: map-get($my-colors, color1);
+    }
+  }
+
+  &--light{
+    background-color: #fff;
+    color: map-get($my-colors, dark-color);
+    border-color: #fff;
+
+    &:hover{
+      background-color: map-get($my-colors, dark-color);
+      color: #000;
+      // border-color: map-get($my-colors, dark-color);
+    }
+  }
+
+  @each $color, $value in $my-colors{
+    &--#{$color}{
+      background-color: $value;
+      color: #fff;
+      border: 1px solid $value;
+
+      &:hover{
+        color: #fff;
+        background-color: darken($value, 15%);
+        border: 1px solid darken($value, 15%);
+      }
+    }
+  }
+
+  &-borde{
+    border: 1px solid #ddd;
+  }
+
+  &-small{
+    font-size: .85rem;
+    line-height: .85rem;
+    padding: .35rem 1.25rem;
+  }
+
+  &-big{
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    padding: .85rem 1.5rem;
+  }
+}
+
+
+.btn[disabled] {
+  // background-color: #ddd !important;
+  // border-color: #ddd !important;
+  background-color: #bbb !important;
+  border-color: #bbb !important;
+}
+
+
+.btn--circle{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  // background-color: inherit;
+
+  i, &:before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

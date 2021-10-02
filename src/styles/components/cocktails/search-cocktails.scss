@@ -1,0 +1,16 @@
+.search-input-cocktails{
+
+  @include mq-from(lg){
+    .search-input-text{
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding-left: 1rem;
+      padding-right: 2.5rem;
+    }
+  
+    .search-input-icon{
+      font-size: 1.25rem;
+      margin-right: .75rem;
+    }
+  }
+}

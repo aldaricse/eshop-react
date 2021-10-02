@@ -1,0 +1,54 @@
+.footer{
+  &, a{
+    color: #fff;
+  }
+
+  &-content{
+    padding: 2rem 0;
+    &-row{
+      padding: 1.5rem 0 0;
+    }
+    &-img{
+      &-logo{
+        &-1{
+          max-width: 270px;
+          margin: auto;
+        }
+      }
+    }
+    &-icons{
+      display: flex;
+      justify-content: space-between;
+      max-width: 8rem;
+
+      .icon{
+        font-size: 1.75rem;
+      }
+    }
+  }
+  &-text{
+    font-size: 14px;
+  }
+
+  &-text_link{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &-item{
+    margin: 0 0 1rem;
+  }
+
+  &-item2{
+    padding: 0 0 .45rem;
+    a{
+      color: #bbb;
+    }
+  }
+}
+
+// @media screen and(max-width: 992px) and  (min-width: 576px){
+//   .footer-content-logos{
+//     height: 13rem;
+//   }
+// }

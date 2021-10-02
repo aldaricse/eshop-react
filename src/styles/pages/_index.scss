@@ -1,0 +1,124 @@
+// banner
+.home{
+
+  &-banner{
+    position: relative;
+    height: calc(100vh - #{$gutter-header});
+
+    .swiper-pagination{
+      bottom: 5%;
+    }
+
+    .item-banner{
+      background-color: #000;
+    
+      &__image{
+        opacity: .7;
+      }
+    
+      &__content{
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        z-index: 1;
+        top: 25%;
+    
+        h2, span, a{
+          margin: .75rem 0;
+        }
+    
+        h2{
+          font-size: 3.15rem;
+          line-height: 3.15rem;
+        }
+    
+        span{
+          font-size: 1.5rem;
+        }
+
+        @include mq-to(lg){
+          h2{
+            font-size: 1.75rem;
+            line-height: 1.75rem;
+          }
+      
+          span{
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+    
+    .swiper-slide-active{
+      .item-banner__content{
+        @extend .animated;
+        @extend .fadeInUp;
+        @extend .delay-1s;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #fff;
+    }
+  }
+
+  &-about{
+    background-image: url(/assets/images/seccion-nosotros.jpg);
+  }
+
+  &-offers{
+    .swiper-container{
+      height: 350px;
+    }
+  }
+
+  &-contact{
+    .contact-left{
+      
+      @include mq-from(lg){
+        border: 1px solid #000;
+        border-width: 0 1px 0 0;
+
+        &::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          // clip-path: polygon(0 -4px,10% 100%,100% 100%,0 100%);
+          clip-path: polygon(0 -4px, 8% 100%,100% 100%,0 100%);
+          background-color: #000;
+          z-index: 20;
+        }
+      }
+    }
+
+    .col-telefonos{
+      @include mq-from(md){
+        border-right: 1px solid #000;
+      }
+    }
+  }
+
+}
+
+
+.home-list-telehones{
+  font-size: 14px;
+  
+  a{
+    margin-right: 4px;
+    display: inline-block;
+
+    &:after{
+      content: '/';
+      margin-left: 4px;
+    }
+
+    &:last-child:after{
+      display: none;
+    }
+  }
+
+}

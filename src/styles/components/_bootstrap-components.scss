@@ -1,0 +1,37 @@
+// breadcrumb
+.breadcrumb{
+  background-color: transparent;
+  padding: 0.5rem 0;
+}
+
+// dropdown
+.dropdown-item:active{
+  background-color: map-get($my-colors, color1);
+  &, a{
+    color: #fff;
+  }
+}
+
+// pagination
+.pagination{
+  .page-link{
+    border-radius: 0 !important;
+    // background-color: map-get($my-colors, color3);
+    // border-color: map-get($my-colors, color1) !important;
+    background-color: transparent;
+    border-color: transparent !important;
+    color: map-get($my-colors, color1);
+
+    &:focus{
+      box-shadow: 0 0 0 0.2rem rgba(map-get($my-colors, color1), 0.25);
+    }
+  }
+
+  .page-item.active{
+    .page-link{
+      background-color: map-get($my-colors, color1);
+      color: #fff;
+    }
+  }
+
+}

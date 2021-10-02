@@ -1,0 +1,211 @@
+
+.form-control[disabled] {
+  background-color: #ddd !important;
+}
+
+.form-group{
+  position: relative;
+  // margin-bottom: .75rem;
+  margin: 10px 0 0;
+}
+
+.col-form-label{
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+
+.form-control{
+  // color: #575756;
+  color: #000;
+	background-color: #fff;
+	border-radius: 0;
+	border: 0;
+	width: 100%;
+  padding: .25rem .75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(#000,.35);
+	box-shadow: none;
+	outline: 0;
+  transition: all .3s;
+
+  &:focus, &:active{
+    border: 1px solid #000;
+	}
+
+  &.small{
+    max-width: 60px;
+    width: 100%;
+  }
+
+  &[disabled] {
+    background-color: #f0f0f0;
+  }
+
+  // THEMES
+  &.theme-line{
+    border-width: 0 0 2px 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    // border: 0!important;
+    background-image: none;
+    // color: #000;
+
+    &:focus, &:active{
+      border-bottom-width: 2px;
+      border-color: #000;
+    }
+  }
+}
+
+
+// LIST
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// CHECKBOX
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(#000, 0.12);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background-color: map-get($my-colors, color1);
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(#000, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background-color: map-get($my-colors, color1);
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background-color: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background-color: #fff;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 #fff,
+      4px 0 0 #fff,
+      4px -2px 0 #fff,
+      4px -4px 0 #fff,
+      4px -6px 0 #fff,
+      4px -8px 0 #fff;
+    transform: rotate(45deg);
+  }
+}
+
+input[type="checkbox"]{
+  &.error + label{
+    color: red;
+  }
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+  background-color: map-get($my-colors, color1) !important;
+}
+
+.custom-control-input:checked~.custom-control-label::before{
+  background-color: map-get($my-colors, color1);
+}
+
+.custom-control-label::before, .custom-control-label::after{
+  cursor: pointer;
+  top: .15rem;
+}
+
+.custom-checkbox{
+  max-width: 100%;
+  font-size: .85rem;
+}
+
+
+// input error
+.form-message {
+  font-size: 10px;
+  padding-top: 2px;
+}
+
+.form-message.valid {
+  color: #4caf50;
+}
+
+.form-message.invalid {
+  color: #f44336;
+}
+
+.input-row {
+  margin: 10px 0 0;
+}
+
+.has-error {
+  border: 1px solid #f44336;
+}
+
+
+// search input
+
+.container-search-input{
+  position: relative;
+
+  .search-input-text{
+    display: block;
+    width: 100%;
+    padding-right: 1.5rem;
+  }
+
+  .search-input-icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: .5rem;
+    color: #333333;
+  }
+}

@@ -1,0 +1,61 @@
+.container-list-cocktails{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-cocktail{
+  position: relative;
+  flex: 0 0 50%;
+  max-width: 50%;
+  // max-width: 250px;
+  height: 300px;
+  overflow: hidden;
+  // margin: auto;
+
+  &__image{
+    transition: all .4s ease;
+  }
+
+  &__info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding: 1rem;
+    background-color: transparent;
+    color: #fff;
+
+    span{
+      display: block;
+      font-size: 1rem;
+    }
+  }
+
+  &__code{
+    font-size: .75rem !important;
+  }
+
+  &::after{
+    @extend .absolute-container;
+    content: "";
+    opacity: .7;
+    // background: linear-gradient(0deg,rgba(0,0,0,.8) 0,rgba(0,0,0,.4) 30%,transparent 80%);
+    background: linear-gradient(0deg,rgba(0,0,0,.8) 0,rgba(0,0,0,.4) 30%,transparent 50%);
+  }
+
+  &:hover{
+    .card-cocktail__image{
+      transform: scale(1.15);
+    }
+  }
+
+  @include mq-from(md){
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+
+  @include mq-from(lg){
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}

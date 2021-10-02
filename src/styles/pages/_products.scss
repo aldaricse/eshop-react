@@ -1,0 +1,54 @@
+
+.card-product-category{
+  min-height: unset;
+  height: 100%;
+
+  img{
+    max-width: 75px;
+    max-height: 120px;
+    margin-top: 0;
+  }
+
+  &:hover{
+    @extend .bg-color2;
+
+    img{
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+.card-product-cart{
+  border-bottom: 1px solid #ddd;
+
+  .btn{
+    padding: .45rem .65rem;
+    font-size: .75rem;
+  }
+
+  &:last-child{
+    border-bottom: 0;
+  }
+}
+
+.products{
+  &-banner{
+    background-image: url(/assets/images/section-gracias.jpg);
+  }
+}
+
+
+.breadcrumb-product-category{
+  @include mq-to(md){
+    li {
+      .fa{
+        font-size: 12px;
+      }
+
+      .text{
+        font-size: 9.5px;
+      }
+    }
+  }
+}

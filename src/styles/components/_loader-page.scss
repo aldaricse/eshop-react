@@ -1,0 +1,107 @@
+.loader-page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #141414;
+	z-index: 1000;
+}
+
+.loader-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin: {
+		top: -10px;
+		left: -52px;
+	}
+
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #fefefe;
+}
+
+.loader-circle {
+	width: 180px;
+	height: 180px;
+	box-sizing: border-box;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	border: {
+		top: 5px solid #fefefe;
+		bottom: 2px solid transparent;
+		left: 2px solid transparent;
+		right: 2px solid transparent;
+		radius: 50%;
+	}
+	margin: {
+		top: -90px;
+		left: -90px;
+	}
+	animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+// $bgcolor_loader: rgba(#fff, .8);
+// $color_loader: map-get($my-colors, color5);
+
+// .loader-page{
+// 	@extend .RBNo31-Light;
+// }
+
+.loader-page{
+	background-color: rgba(#fff, .8);
+
+	.loader-name{
+		color: #686868;
+	}
+
+	.loader-circle{
+		border-top: 5px solid #686868;
+	}
+
+	&--dark{
+		// background-color: rgba(#000, .8);
+		background-color: rgba(0, 0, 0, .975);
+
+		.loader-name{
+			color: #fff;
+		}
+
+		.loader-circle{
+			border-top: 5px solid #fff;
+		}
+	}
+}
+
+
+
+@each $color, $value in $my-colors{
+	.loader-page{
+		&.theme-#{$color}{
+
+			background-color: rgba($value, .8);
+
+			.loader-name{
+				color: #fff;
+			}
+
+			.loader-circle{
+				border-top: 5px solid $value;
+			}
+		}
+	}
+}

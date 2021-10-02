@@ -1,0 +1,51 @@
+include ../config/variables
+
+//- Master layout
+doctype html
+html(lang='es')
+	head
+
+		//- Meta
+		meta(charset='UTF-8')
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+		//- Chrome, Firefox y Opera
+		meta(name='theme-color', content=`${theme_color}`)
+
+		//- iOS Safari
+		meta(name='apple-mobile-web-app-status-bar-style', content=`${theme_color}`)
+
+		//- Windows Phone
+		meta(name='msapplication-navbutton-color', content=`${theme_color}`)
+
+		//- Meta tags
+		title #{titulo} | #{sitio}
+		meta(name="keywords" content=`${keywords}` data-rh="true")
+		meta(name="description" content=`${descripcion}` data-rh="true")
+		meta(name='autor', content=`${autor}`)
+
+		//-Og tags
+		meta(property='og:type', content='website')
+		meta(property='og:title', content=`${titulo}`)
+		meta(property='og:locale', content='es_ES')
+		meta(property='og:url', content='https://demo-cocktails.netlify.app')
+		meta(property='og:description', content=`${descripcion}`)
+		meta(property='og:site_name', content=`${sitio}`)
+
+		//- Twitter
+		meta(property='twitter:card', content='summary')
+		meta(property='twitter:url', content='https://demo-cocktails.netlify.app')
+		meta(property='twitter:title', content=`${titulo}`)
+		meta(property='twitter:description', content=`${descripcion}`)
+		
+		//- Favicons
+		link(rel='apple-touch-icon', sizes='32x32', href=`${path_favicon}`)
+		link(rel='icon', sizes='32x32', href=`${path_favicon}`)
+		link(rel='shortcut icon', href=`${path_favicon}`)
+
+		link(rel="stylesheet", href="/assets/lib/font-awesome-5.8.1/css/all.min.css")
+
+	body.body
+		//- content
+		block content

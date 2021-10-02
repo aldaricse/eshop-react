@@ -1,0 +1,118 @@
+// FONTS
+@font-face {
+    font-family: "untitled-font-2";
+    src:url("../fonts/untitled-font-2.eot");
+    src:url("../fonts/untitled-font-2.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/untitled-font-2.woff") format("woff"),
+    url("../fonts/untitled-font-2.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'JaneAusten';
+    src: url('../fonts/JaneAusten.woff2') format('woff2'), url('../fonts/JaneAusten.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Grotesque-MT-Std';
+    src: url('../fonts/GrotesqueMTStd-Condensed.woff2') format('woff2'), url('../fonts/GrotesqueMTStd-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham-Light.woff2') format('woff2'), url('../fonts/Gotham-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Prohibition';
+    src: url('../fonts/Prohibition-Regular.woff2') format('woff2'), url('../fonts/Prohibition-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/Gotham-Bold.woff2') format('woff2'), url('../fonts/Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Myriad-Pro';
+    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'), url('../fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.woff2') format('woff2'), url('../fonts/Gotham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Gotham-Black';
+    src: url('../fonts/Gotham-Black.woff2') format('woff2'), url('../fonts/Gotham-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Esther';
+    src: url('../fonts/Esther-Regular.woff2') format('woff2'), url('../fonts/Esther-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'MrsEavesSmallCaps';
+    src: url('../fonts/MrsEavesSmallCaps.woff2') format('woff2'), url('../fonts/MrsEavesSmallCaps.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Medium.woff2') format('woff2'),   url('../fonts/Gotham-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'Gotham-Ultra';
+    src: url('../fonts/Gotham-Ultra.woff2') format('woff2'),  url('../fonts/Gotham-Ultra.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  /*FONTS*/
+  $Gotham: 'Gotham', sans-serif;
+  $GothamUltra: 'Gotham-Ultra', sans-serif;
+  $GothamBook: 'Gotham-Book', sans-serif;
+  $GothamMedium: 'Gotham-Light', sans-serif;
+  $GothamBold: 'Gotham-Bold', sans-serif;
+  $Esther: 'Esther', sans-serif;
+  $JaneAusten: 'JaneAusten', sans-serif;
+  $GrotesqueMTStd: 'Grotesque-MT-Std', sans-serif;
+  $Prohibition: 'Prohibition', sans-serif;
+  $MrsEavesSmallCaps: 'MrsEavesSmallCaps', sans-serif;
